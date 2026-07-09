@@ -3,132 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mantenimiento y Soluciones para el Hogar & Oficina</title>
-    <!-- Tailwind CSS -->
+    <title>Mantenimiento y Soluciones para el Hogar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes girar_3d {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(360deg); }
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
         }
     </style>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen font-sans relative">
+<body class="bg-gray-50 flex flex-col min-h-screen">
 
-    <!-- MENÚ DE NAVEGACIÓN -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center w-full md:w-auto justify-center md:justify-start">
-                <!-- Su logotipo con animación 3D -->
-                <img src="imagen 3d_1_2.png" alt="Logotipo Mantenimiento y Soluciones" class="flex-shrink-0" style="height: 3rem; margin-right: 0.75rem; animation: girar_3d 6s linear infinite;">
-                <div class="text-base sm:text-lg md:text-xl font-extrabold text-teal-950 tracking-tight text-center md:text-left leading-tight">
-                    MANTENIMIENTO Y SOLUCIONES<br class="hidden md:block"><span class="text-teal-700"> PARA EL HOGAR & OFICINA</span>
+                <img src="imagen 3d_1_2.png" alt="Imagen 3D" class="flex-shrink-0" style="height: 2rem; margin-right: 0.5rem; animation: girar_3d 4s linear infinite;">
+                <div class="text-base sm:text-lg md:text-2xl font-bold text-teal-900 tracking-tight text-center md:text-left leading-tight">
+                    MANTENIMIENTO Y SOLUCIONES PARA EL HOGAR & OFICINA
                 </div>
             </div>
             
             <div class="space-x-6 hidden md:flex font-semibold text-gray-700">
                 <a href="#" class="hover:text-teal-700 transition">Inicio</a>
-                <a href="#servicios" class="hover:text-teal-700 transition">Servicios y Oficios</a>
-                <a href="https://wa.me." target="_blank" class="bg-teal-800 text-white px-4 py-2 rounded-lg hover:bg-teal-900 transition shadow">Cotizar por WhatsApp</a>
+                <a href="#servicios" class="hover:text-teal-700 transition">Servicios</a>
+                <a href="#contacto" class="bg-teal-800 text-white px-4 py-2 rounded-lg hover:bg-teal-900 transition">Contacto</a>
             </div>
         </nav>
     </header>
 
-    <!-- MENÚ MÓVIL RESPONSIVE -->
-    <div class="bg-teal-50 border-b border-teal-100 py-3 md:hidden block sticky top-[76px] z-40 shadow-sm">
+    <div class="bg-teal-50 border-b border-teal-100 py-3 md:hidden block">
         <div class="flex justify-center items-center space-x-6 font-semibold text-sm text-teal-950">
             <a href="#" class="hover:text-teal-700 transition">Inicio</a>
             <a href="#servicios" class="hover:text-teal-700 transition">Servicios</a>
-            <a href="https://wa.me." target="_blank" class="bg-teal-800 text-white px-3 py-1.5 rounded-md hover:bg-teal-900 transition">Cotizar</a>
+            <a href="#contacto" class="bg-teal-800 text-white px-3 py-1.5 rounded-md hover:bg-teal-900 transition">Contacto</a>
         </div>
     </div>
 
     <main class="flex-grow">
         
-        <!-- SECCIÓN PRINCIPAL (HERO) -->
-        <section class="bg-gradient-to-br from-teal-900 to-teal-950 text-white py-16 md:py-24 px-6 relative overflow-hidden">
-            <div class="container mx-auto text-center relative z-10 max-w-4xl">
-                <span class="bg-teal-800 text-teal-200 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full inline-block mb-4">Santa Cruz de la Sierra</span>
-                <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight tracking-tight">
-                    Soluciones Técnicas Profesionales para tu Hogar, Edificio u Oficina
-                </h1>
-                <p class="text-base md:text-xl mb-10 text-teal-100 max-w-2xl mx-auto font-light">
-                    Atención inmediata en zonas céntricas y condominios. Garantía, puntualidad y total respaldo formal en cada labor.
-                </p>
+        <section class="bg-teal-900 text-white py-16 md:py-20 px-6">
+            <div class="container mx-auto text-center">
+                <h1 class="text-3xl md:text-6xl font-bold mb-6 leading-tight">Soluciones Profesionales para tu Hogar y Oficina</h1>
+                <p class="text-base md:text-xl mb-10 text-teal-100">Calidad, rapidez y confianza en cada mantenimiento.</p>
                 
-                <!-- Botón de acción con el logotipo oficial verde de WhatsApp -->
-                <a href="https://wa.me." 
+                <a href="https://luisescobar971033978.github.io/mi-mapa-app/index.html" 
                    target="_blank"
-                   class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold py-4 px-8 rounded-full text-base md:text-lg transition duration-300 shadow-xl transform hover:scale-105">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://w3.org">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    <span>Solicitar Presupuesto por WhatsApp</span>
+                   class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-base md:text-lg transition duration-300 shadow-lg transform hover:scale-105">
+                    ¡Ponte en contacto hoy mismo!
                 </a>
             </div>
         </section>
 
-        <!-- SECCIÓN DE SERVICIOS -->
-        <section id="servicios" class="py-16 px-6 bg-gray-50">
-            <div class="container mx-auto max-w-6xl">
-                <h2 class="text-3xl font-bold text-center text-teal-900 mb-2">Nuestras Especialidades Técnicas</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-xl mx-auto text-sm md:text-base">Mano de obra calificada para reparaciones urgentes y proyectos programados.</p>
+        <section id="servicios" class="py-16 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center text-teal-900 mb-12">Nuestros Servicios Destacados</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Tarjeta 1: Hogar -->
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-teal-800 hover:shadow-lg transition">
+                    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-teal-800">
                         <div class="text-4xl mb-4">🏠</div>
-                        <h3 class="text-xl font-bold mb-2 text-teal-950">Mantenimiento de Hogar</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Servicios especializados de plomería (filtraciones), cortocircuitos eléctricos, albañilería fina, pintura y reparaciones generales con acabados limpios.
-                        </p>
+                        <h3 class="text-xl font-bold mb-2">Mantenimiento de Hogar</h3>
+                        <p class="text-gray-600">Plomería, electricidad y reparaciones generales para mantener tu casa funcionando perfecto.</p>
                     </div>
-                    <!-- Tarjeta 2: Oficinas y Condominios -->
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-teal-800 hover:shadow-lg transition">
+                    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-teal-800">
                         <div class="text-4xl mb-4">🏢</div>
-                        <h3 class="text-xl font-bold mb-2 text-teal-950">Soluciones Corporativas</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Mantenimiento preventivo para oficinas, locales comerciales y áreas comunes de condominios. Adecuaciones de espacios y redes de servicios.
-                        </p>
+                        <h3 class="text-xl font-bold mb-2">Soluciones de Oficina</h3>
+                        <p class="text-gray-600">Instalaciones, mantenimiento preventivo y adecuaciones para espacios de trabajo productivos.</p>
                     </div>
-                    <!-- Tarjeta 3: Equipos y Climatización -->
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-teal-800 hover:shadow-lg transition">
+                    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-teal-800">
                         <div class="text-4xl mb-4">🛠️</div>
-                        <h3 class="text-xl font-bold mb-2 text-teal-950">Instalaciones Técnicas</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Instalación y limpieza profunda de aires acondicionados, montaje seguro de duchas eléctricas, termotanques y sistemas de bombeo de agua.
-                        </p>
+                        <h3 class="text-xl font-bold mb-2">Instalaciones Técnicas</h3>
+                        <p class="text-gray-600">Expertos en aires acondicionados, duchas eléctricas y sistemas complejos de drenaje.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- SECCIÓN DE RESPALDO FORMAL (BLINDAJE TRIBUTARIO) -->
-        <section class="bg-teal-50 border-t border-b border-teal-100 py-12 px-6">
-            <div class="container mx-auto text-center max-w-2xl">
-                <h3 class="text-lg font-bold text-teal-900 mb-3">Respaldo Formal para Administraciones y Empresas</h3>
-                <p class="text-gray-700 text-sm leading-relaxed">
-                    Facilitamos la gestión contable de su condominio o negocio. Coordinamos la ejecución de trabajos mediante el <span class="font-semibold text-teal-800">mecanismo legal de retenciones impositivas</span> vigentes o mediante facturación electrónica según el requerimiento de su administración.
-                </p>
-            </div>
-        </section>
     </main>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="bg-teal-950 text-white py-10 border-t border-teal-900">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-            <div>
-                <p class="font-bold text-base">Mantenimiento y Soluciones para el Hogar & Oficina</p>
-                <p class="text-xs text-teal-400 mt-1">Santa Cruz de la Sierra, Bolivia.</p>
-            </div>
-            <div class="flex flex-wrap justify-center gap-4 text-xs text-teal-300">
-                <a href="https://github.io" target="_blank" class="hover:text-white transition">Acceso Técnico Acreditado</a>
-                <span class="text-teal-800 hidden md:inline">|</span>
-                <a href="https://github.io" target="_blank" class="hover:text-white transition">Panel de Control</a>
+    <footer class="bg-teal-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2019. Todos los derechos reservados.</p>
+            <div class="mt-2 space-x-4 text-sm text-teal-200">
+                <a href="https://luisescobar971033978.github.io/mi-mapa-app/tecnico.html" target="_blank" class="hover:text-white">Acceso Tecnico Acreditado</a>
+                <a href="https://luisescobar971033978.github.io/mi-mapa-app/admin.html" target="_blank" class="hover:text-white">Administrador/Moderador</a>
             </div>
         </div>
     </footer>
 
-    <!-- BOTÓN FLOTANTE FIJO DE WHATSAPP (INFERIOR IZQUIERDA) -->
-    <a href="https://wa.me." 
-       target="_blank"
+</body>
+</html>
