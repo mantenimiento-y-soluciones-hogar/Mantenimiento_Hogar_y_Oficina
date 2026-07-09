@@ -19,31 +19,41 @@
 <body class="bg-gray-50 flex flex-col min-h-screen">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="imagen 3d_1_2.png" alt="Imagen 3D" style="height: 2rem; margin-right: 0.5rem; animation: girar_3d 4s linear infinite;">
-                <div class="text-2xl font-bold text-teal-900 tracking-tight">MANTENIMIENTO Y SOLUCIONES PARA EL HOGAR & OFICINA</div>
+        <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center w-full md:w-auto justify-center md:justify-start">
+                <img src="imagen 3d_1_2.png" alt="Imagen 3D" class="flex-shrink-0" style="height: 2rem; margin-right: 0.5rem; animation: girar_3d 4s linear infinite;">
+                <div class="text-base sm:text-lg md:text-2xl font-bold text-teal-900 tracking-tight text-center md:text-left leading-tight">
+                    MANTENIMIENTO Y SOLUCIONES PARA EL HOGAR & OFICINA
+                </div>
             </div>
+            
             <div class="space-x-6 hidden md:flex font-semibold text-gray-700">
                 <a href="#" class="hover:text-teal-700 transition">Inicio</a>
                 <a href="#servicios" class="hover:text-teal-700 transition">Servicios</a>
                 <a href="#contacto" class="bg-teal-800 text-white px-4 py-2 rounded-lg hover:bg-teal-900 transition">Contacto</a>
             </div>
-            <button class="md:hidden text-gray-700 text-2xl">☰</button>
         </nav>
     </header>
 
+    <div class="bg-teal-50 border-b border-teal-100 py-3 md:hidden block">
+        <div class="flex justify-center items-center space-x-6 font-semibold text-sm text-teal-950">
+            <a href="#" class="hover:text-teal-700 transition">Inicio</a>
+            <a href="#servicios" class="hover:text-teal-700 transition">Servicios</a>
+            <a href="#contacto" class="bg-teal-800 text-white px-3 py-1.5 rounded-md hover:bg-teal-900 transition">Contacto</a>
+        </div>
+    </div>
+
     <main class="flex-grow">
         
-        <section class="bg-teal-900 text-white py-20 px-6">
+        <section class="bg-teal-900 text-white py-16 md:py-20 px-6">
             <div class="container mx-auto text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">Soluciones Profesionales para tu Hogar y Oficina</h1>
-                <p class="text-lg md:text-xl mb-10 text-teal-100">Calidad, rapidez y confianza en cada mantenimiento.</p>
+                <h1 class="text-3xl md:text-6xl font-bold mb-6 leading-tight">Soluciones Profesionales para tu Hogar y Oficina</h1>
+                <p class="text-base md:text-xl mb-10 text-teal-100">Calidad, rapidez y confianza en cada mantenimiento.</p>
                 
                 <a href="https://luisescobar971033978.github.io/mi-mapa-app/index.html" 
                    target="_blank"
-                   class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105">
-                   ¡Ponte en contacto hoy mismo!
+                   class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-base md:text-lg transition duration-300 shadow-lg transform hover:scale-105">
+                    ¡Ponte en contacto hoy mismo!
                 </a>
             </div>
         </section>
