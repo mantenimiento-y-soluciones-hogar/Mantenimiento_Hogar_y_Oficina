@@ -27,23 +27,26 @@
                 </div>
             </div>
             
-            <div class="space-x-6 hidden md:flex font-semibold text-gray-700">
-                <a href="#" class="hover:text-teal-700 transition">Inicio</a>
-                <a href="#servicios" class="hover:text-teal-700 transition">Servicios</a>
+            <div class="space-x-6 hidden md:flex font-semibold text-gray-700 items-center">
+                <a href="#" id="nav-inicio-desk" onclick="mostrarSeccion('principal')" class="hover:text-teal-700 transition">Inicio</a>
+                <a href="#" id="nav-admin-desk" onclick="mostrarSeccion('administracion')" class="hover:text-teal-700 transition px-2 py-1 rounded">Administración y Oficina</a>
+                <a href="#servicios" id="nav-servicios-desk" onclick="mostrarSeccion('principal')" class="hover:text-teal-700 transition">Servicios</a>
                 <a href="#contacto" class="bg-teal-800 text-white px-4 py-2 rounded-lg hover:bg-teal-900 transition">Contacto</a>
             </div>
         </nav>
     </header>
 
     <div class="bg-teal-50 border-b border-teal-100 py-3 md:hidden block">
-        <div class="flex justify-center items-center space-x-6 font-semibold text-sm text-teal-950">
-            <a href="#" class="hover:text-teal-700 transition">Inicio</a>
-            <a href="#servicios" class="hover:text-teal-700 transition">Servicios</a>
+        <div class="flex flex-wrap justify-center items-center gap-4 font-semibold text-sm text-teal-950 px-2">
+            <a href="#" id="nav-inicio-mob" onclick="mostrarSeccion('principal')" class="hover:text-teal-700 transition">Inicio</a>
+            <a href="#" id="nav-admin-mob" onclick="mostrarSeccion('administracion')" class="hover:text-teal-700 transition px-2 py-0.5 rounded">Administración y Oficina</a>
+            <a href="#servicios" id="nav-servicios-mob" onclick="mostrarSeccion('principal')" class="hover:text-teal-700 transition">Servicios</a>
             <a href="#contacto" class="bg-teal-800 text-white px-3 py-1.5 rounded-md hover:bg-teal-900 transition">Contacto</a>
         </div>
     </div>
 
-    <main class="flex-grow">
+    <!-- SECCIÓN PRINCIPAL ORIGINAL -->
+    <main id="seccion-principal" class="flex-grow">
         
         <section class="bg-teal-900 text-white py-16 md:py-20 px-6">
             <div class="container mx-auto text-center">
@@ -83,6 +86,62 @@
         </section>
     </main>
 
+    <!-- NUEVA SECCIÓN DE ADMINISTRACIÓN Y OFICINA (Estilo Corporativo Verde) -->
+    <main id="seccion-administracion" class="flex-grow hidden bg-white">
+        <!-- Banner Superior en Verde Teal Corporativo -->
+        <div class="bg-teal-900 py-6 md:py-10 px-6 text-white shadow-md">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Administración y Oficina</h2>
+                <span class="text-xs md:text-sm text-teal-200 font-medium mt-2 md:mt-0">Home / Administración y Oficina</span>
+            </div>
+        </div>
+
+        <!-- Contenido Distribuido según la Estructura de la Referencia -->
+        <div class="container mx-auto px-6 py-12 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                
+                <!-- Columna Izquierda: Tarjeta / Imagen de Referencia Corporativa -->
+                <div class="md:col-span-5 bg-gray-50 rounded-lg overflow-hidden shadow-md border border-gray-200">
+                    <div class="bg-teal-800 text-white p-4 text-center font-bold text-sm tracking-wider">
+                        SOPORTE TÉCNICO COMPROMETIDO
+                    </div>
+                    <div class="h-64 md:h-80 bg-cover bg-center flex items-center justify-center p-6 text-center" style="background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('imagen 3d_1_2.png');">
+                        <div>
+                            <div class="text-5xl mb-4">🏢</div>
+                            <p class="text-teal-900 font-extrabold text-lg tracking-wide mb-2">GESTIÓN INTEGRAL</p>
+                            <p class="text-xs text-gray-500 max-w-xs mx-auto leading-relaxed">Garantía de habitabilidad, cumplimiento normativo y la máxima excelencia en cada labor técnica ejecutada.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Reseñas con Formato Corporativo -->
+                <div class="md:col-span-7 space-y-8">
+                    <div>
+                        <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¿Quiénes somos?</h3>
+                        <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                            Somos un servicio técnico independiente dedicado a brindar mantenimiento especializado para el hogar y la oficina, creado para responder con eficiencia, responsabilidad y calidad a las necesidades de nuestros clientes. Nos especializamos en resolver problemas de manera práctica y efectiva, ofreciendo soporte técnico confiable donde la satisfacción y conformidad final es nuestra mayor prioridad. Cada labor que realizamos refleja nuestro compromiso con la excelencia, aplicando criterios técnicos adecuados y respetando los estándares de seguridad y las normas bolivianas de construcción vigentes.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¿Nuestro compromiso?</h3>
+                        <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                            Nuestro compromiso es estar presentes cuando nuestros clientes más nos necesitan, brindando atención rápida, oportuna y profesional para solucionar emergencias y mantenimientos en hogares y oficinas. Desarrollamos cada labor con dedicación, cuidando cada detalle y ofreciendo soluciones de habitabilidad que generen tranquilidad, seguridad y confianza. Nuestra responsabilidad es entregar resultados duraderos, realizados con buenas prácticas técnicas y bajo el cumplimiento de los estándares de calidad y la normativa técnica boliviana.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¡Nuestro objetivo!</h3>
+                        <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                            Nuestro objetivo es convertirnos en el aliado de confianza de cada familia, administración y oficina, proporcionando servicios de asistencia técnica que mantengan sus espacios seguros, funcionales y en excelentes condiciones. Buscamos superar las expectativas de nuestros clientes mediante soluciones rápidas, eficientes y definitivas, logrando su satisfacción plena a través de un trabajo profesional, responsable y comprometido con el cumplimiento de las normas de construcción y las regulaciones contables y fiscales vigentes para la prestación de oficios.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
     <footer class="bg-teal-900 text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2019. Todos los derechos reservados.</p>
@@ -100,6 +159,39 @@
        title="Contactar por WhatsApp">
         <img src="whatsapp.png" alt="WhatsApp" class="w-9 h-9 object-contain">
     </a>
+
+    <!-- Lógica de navegación con cambio dinámico de pestañas activas -->
+    <script>
+        function mostrarSeccion(seccion) {
+            const principal = document.getElementById('seccion-principal');
+            const administracion = document.getElementById('seccion-administracion');
+            
+            const navAdminDesk = document.getElementById('nav-admin-desk');
+            const navAdminMob = document.getElementById('nav-admin-mob');
+            
+            if (seccion === 'administracion') {
+                principal.classList.add('hidden');
+                administracion.classList.remove('hidden');
+                
+                // Aplicar el color de pestaña activa (Verde Corporativo de Fondo)
+                navAdminDesk.classList.add('bg-teal-800', 'text-white');
+                navAdminDesk.classList.remove('text-gray-700');
+                navAdminMob.classList.add('bg-teal-800', 'text-white');
+                navAdminMob.classList.remove('text-teal-950');
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                administracion.classList.add('hidden');
+                principal.classList.remove('hidden');
+                
+                // Remover el color activo al volver a Inicio
+                navAdminDesk.classList.remove('bg-teal-800', 'text-white');
+                navAdminDesk.classList.add('text-gray-700');
+                navAdminMob.classList.remove('bg-teal-800', 'text-white');
+                navAdminMob.classList.add('text-teal-950');
+            }
+        }
+    </script>
 
 </body>
 </html>
