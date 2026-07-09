@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mantenimiento y Soluciones para el Hogar</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes girar_3d {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-teal-900 tracking-tight">MANTENIMIENTO Y SOLUCIONES PARA EL HOGAR & OFICINA</div>
+            <div class="flex items-center">
+                <img src="imagen 3d_1_2.png" alt="Imagen 3D" style="height: 2rem; margin-right: 0.5rem; animation: girar_3d 2s linear infinite;">
+                <div class="text-2xl font-bold text-teal-900 tracking-tight">MANTENIMIENTO Y SOLUCIONES PARA EL HOGAR & OFICINA</div>
+            </div>
             <div class="space-x-6 hidden md:flex font-semibold text-gray-700">
                 <a href="#" class="hover:text-teal-700 transition">Inicio</a>
                 <a href="#servicios" class="hover:text-teal-700 transition">Servicios</a>
@@ -30,7 +43,7 @@
                 <a href="https://luisescobar971033978.github.io/mi-mapa-app/index.html" 
                    target="_blank"
                    class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105">
-                    ¡Ponte en contacto hoy mismo!
+                   ¡Ponte en contacto hoy mismo!
                 </a>
             </div>
         </section>
