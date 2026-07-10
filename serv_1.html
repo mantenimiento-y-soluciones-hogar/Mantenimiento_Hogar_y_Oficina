@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CAMBIAR: Título de la pestaña según el servicio -->
+    <title>Detalle Técnico del Servicio - Mantenimiento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Banner Superior en Verde Teal Corporativo -->
+    <header class="bg-teal-900 py-6 md:py-10 px-6 text-white shadow-md">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <!-- CAMBIAR: Título del Servicio -->
+                <h1 class="text-2xl md:text-4xl font-bold tracking-tight">Mantenimiento Técnico Especializado</h1>
+                <p class="text-xs md:text-sm text-teal-200 font-medium mt-1">Garantía de Habitabilidad y Soluciones Profesionales</p>
+            </div>
+            <!-- Botón de Inicio para regresar al archivo principal index.html -->
+            <a href="index.html" class="bg-teal-800 hover:bg-teal-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition flex items-center gap-2 border border-teal-700 shadow-sm flex-shrink-0">
+                Volver al Inicio
+            </a>
+        </div>
+    </header>
+
+    <!-- Contenido Distribuido -->
+    <main class="container mx-auto px-6 py-12 max-w-6xl flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+            
+            <!-- Columna Izquierda: Tarjeta de Referencia Fotográfica Real -->
+            <div class="md:col-span-5 bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+                <div class="bg-teal-800 text-white p-4 text-center font-bold text-sm tracking-wider">
+                    SOPORTE TÉCNICO COMPROMETIDO
+                </div>
+                <!-- Espacio dedicado para la fotografía real del servicio -->
+                <div class="w-full h-72 md:h-80 bg-gray-100">
+                    <!-- CAMBIAR: Reemplaza 'foto_servicio.jpg' por tu archivo correspondiente (Ej. 'goteras.jpg') -->
+                    <img src="foto_servicio.jpg" alt="Registro fotográfico del servicio técnico" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 bg-gray-50 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 text-center italic">
+                        Personal técnico capacitado operando bajo estrictas normas de seguridad bolivianas.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Textos de Alcance y Reseñas Informativas -->
+            <div class="md:col-span-7 space-y-8">
+                <div>
+                    <!-- CAMBIAR: Título del Alcance -->
+                    <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¿Cuál es el alcance del servicio?</h3>
+                    <!-- CAMBIAR: Texto de referencia detallado del servicio -->
+                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                        Aquí describes detalladamente las labores específicas que cubre este ítem. Explica los problemas comunes que soluciona, los métodos y herramientas técnicas utilizadas, y la manera en que se asegura un resultado definitivo y duradero, cumpliendo con la normativa técnica y los estándares de calidad correspondientes.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¿Nuestro compromiso en esta labor?</h3>
+                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                        Brindar una atención rápida y eficaz para neutralizar cualquier falla o riesgo en tu infraestructura, asegurando la limpieza del área de trabajo, el uso de repuestos garantizados y minimizando el impacto en tus actividades diarias, ya sea en un entorno residencial o corporativo.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¡Nuestro objetivo!</h3>
+                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                        Garantizar el correcto funcionamiento y prolongar la vida útil de sus instalaciones mediante soluciones definitivas, logrando la entera conformidad de copropietarios, administradores y familias que confían en nuestro profesionalismo.
+                    </p>
+                </div>
+                
+                <div class="pt-2">
+                    <a href="index.html" class="text-teal-700 font-bold hover:underline text-sm flex items-center gap-1">
+                        ← Regresar al menú de servicios
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bloque de Respaldo Formal Obligatorio -->
+        <div class="mt-16 pt-8 border-t border-gray-100 text-center max-w-3xl mx-auto">
+            <h3 class="text-lg md:text-xl font-bold text-teal-900 mb-3 tracking-wide">
+                Respaldo Formal para Administraciones y Empresas
+            </h3>
+            <p class="text-gray-600 text-sm md:text-base leading-relaxed px-4">
+                Facilitamos la gestión contable de su condominio o negocio. Coordinamos la ejecución de trabajos mediante el <span class="font-semibold text-teal-800">mecanismo legal de retenciones impositivas</span> vigentes o mediante facturación electrónica según el requerimiento de su administración.
+            </p>
+        </div>
+    </main>
+
+    <!-- Botón Flotante de WhatsApp para conversión directa -->
+    <a href="https://wa.me/59173694080?text=Hola,%20solicito%20información%20sobre%20un%20servicio%20técnico" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 left-6 z-50 transition transform hover:scale-110 drop-shadow-lg flex items-center justify-center bg-[#25D366] w-14 h-14 rounded-full hover:bg-[#20ba5a]">
+        <img src="whatsapp.png" alt="WhatsApp" class="w-9 h-9 object-contain">
+    </a>
+
+    <!-- Pie de página corporativo unificado -->
+    <footer class="bg-teal-900 text-white py-6 mt-auto">
+        <div class="container mx-auto px-6 text-center text-sm text-teal-200">
+            <p class="text-white">&copy; 2019. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
