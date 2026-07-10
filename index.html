@@ -14,7 +14,6 @@
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
 
-    <!-- BARRA DE NAVEGACIÓN SUPERIOR (DESKTOP) -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center w-full md:w-auto justify-center md:justify-start">
@@ -28,12 +27,10 @@
                 <a href="#" onclick="mostrarSeccion('principal')" class="hover:text-teal-700 transition">Inicio</a>
                 <a href="#" id="nav-admin-desk" onclick="mostrarSeccion('administracion')" class="hover:text-teal-700 transition px-2 py-1 rounded">Administración y Oficina</a>
                 
-                <!-- Pestaña Servicios con Menú Desplegable Flotante Directo -->
                 <div class="relative inline-block text-left">
-                    <button id="btn-servicios-desk" onclick="toggleDropdown(event, 'dropdown-menu-desk')" class="hover:text-teal-700 transition px-2 py-1 rounded inline-flex items-center gap-1 focus:outline-none">
+                    <button id="btn-servicios-desk" onclick="toggleDropdown(event, 'dropdown-menu-desk', 'btn-servicios-desk')" class="hover:text-teal-700 transition px-2 py-1 rounded inline-flex items-center gap-1 focus:outline-none">
                         Servicios ▾
                     </button>
-                    <!-- Menú que nace exactamente debajo de la pestaña (Estilo Menú de Aplicación) -->
                     <div id="dropdown-menu-desk" class="origin-top-right absolute right-0 mt-2 w-80 rounded-md shadow-xl bg-white ring-1 ring-black ring-opacity-10 divide-y divide-gray-100 hidden z-50 max-h-96 overflow-y-auto text-left border border-gray-200">
                         <div class="py-1">
                             <a href="serv_1.html" class="text-gray-800 block px-4 py-2 text-sm hover:bg-gray-200 active:bg-blue-100 transition-colors">Desbrozado de entrada, patios y Jardines</a>
@@ -42,7 +39,7 @@
                             <a href="serv_4.html" class="text-gray-800 block px-4 py-2 text-sm hover:bg-gray-200 active:bg-blue-100 transition-colors">Tuberías trancadas del drenaje sanitario y pluvial</a>
                             <a href="serv_5.html" class="text-gray-800 block px-4 py-2 text-sm hover:bg-gray-200 active:bg-blue-100 transition-colors">Mi Ducha Eléctrica NO funciona</a>
                             <a href="serv_6.html" class="text-gray-800 block px-4 py-2 text-sm hover:bg-gray-200 active:bg-blue-100 transition-colors">Interruptor / Tomacorriente NO funciona</a>
-                            <a href="serv_7.html" class="text-teal-950 font-bold block px-4 py-2 text-sm hover:bg-gray-200 active:bg-blue-100 transition-colors">Requiero Solución definitiva para GOTERAS</a>
+                            <a href="serv_7.html" class="text-gray-800 block px-4 py-2 text-sm hover:bg-gray-200 active:bg-blue-100 transition-colors">Requiero Solución definitiva para GOTERAS</a>
                             <a href="serv_8.html" class="text-gray-800 block px-4 py-2 text-sm hover:bg-gray-200 active:bg-blue-100 transition-colors">Mantenimiento de AIRE ACONDICIONADO</a>
                             <a href="serv_9.html" class="text-gray-800 block px-4 py-2 text-sm hover:bg-gray-200 active:bg-blue-100 transition-colors">Instalación de AIRE ACONDICIONADO</a>
                             <a href="serv_10.html" class="text-gray-800 block px-4 py-2 text-sm hover:bg-gray-200 active:bg-blue-100 transition-colors">Servicio control de Humedad en Paredes</a>
@@ -53,7 +50,7 @@
                             <a href="serv_15.html" class="text-gray-800 block px-4 py-2 text-sm hover:bg-gray-200 active:bg-blue-100 transition-colors">Ampliación de Vivienda y Oficinas</a>
                         </div>
                         <div class="py-1">
-                            <a href="serv_otro.html" class="text-teal-900 font-bold bg-teal-50/50 block px-4 py-2 text-sm hover:bg-orange-100 active:bg-orange-200 transition-colors">📝 Otro, Describa su problema</a>
+                            <a href="serv_otro.html" class="text-teal-900 font-bold bg-teal-50/50 block px-4 py-2 text-sm hover:bg-orange-100 active:bg-orange-200 transition-colors">Otro, Describa su problema</a>
                         </div>
                     </div>
                 </div>
@@ -63,15 +60,13 @@
         </nav>
     </header>
 
-    <!-- NAVEGACIÓN ADAPTATIVA (MÓVIL / TOUCH SCREEN) -->
     <div class="bg-teal-50 border-b border-teal-100 py-3 md:hidden block sticky top-[68px] z-40">
         <div class="flex flex-wrap justify-center items-center gap-4 font-semibold text-sm text-teal-950 px-2">
             <a href="#" onclick="mostrarSeccion('principal')" class="hover:text-teal-700 transition">Inicio</a>
             <a href="#" id="nav-admin-mob" onclick="mostrarSeccion('administracion')" class="hover:text-teal-700 transition px-2 py-0.5 rounded">Administración y Oficina</a>
             
-            <!-- Pestaña Servicios Móvil con Menú Desplegable -->
             <div class="relative inline-block text-left">
-                <button id="btn-servicios-mob" onclick="toggleDropdown(event, 'dropdown-menu-mob')" class="hover:text-teal-700 transition px-2 py-0.5 rounded inline-flex items-center gap-0.5 focus:outline-none">
+                <button id="btn-servicios-mob" onclick="toggleDropdown(event, 'dropdown-menu-mob', 'btn-servicios-mob')" class="hover:text-teal-700 transition px-2 py-0.5 rounded inline-flex items-center gap-0.5 focus:outline-none">
                     Servicios ▾
                 </button>
                 <div id="dropdown-menu-mob" class="origin-top-center absolute left-1/2 -translate-x-1/2 mt-2 w-72 rounded-md shadow-xl bg-white ring-1 ring-black ring-opacity-10 divide-y divide-gray-100 hidden z-50 max-h-80 overflow-y-auto text-left border border-gray-200">
@@ -82,7 +77,7 @@
                         <a href="serv_4.html" class="text-gray-800 block px-4 py-2.5 text-sm hover:bg-gray-200 active:bg-blue-100">Tuberías trancadas del drenaje sanitario y pluvial</a>
                         <a href="serv_5.html" class="text-gray-800 block px-4 py-2.5 text-sm hover:bg-gray-200 active:bg-blue-100">Mi Ducha Eléctrica NO funciona</a>
                         <a href="serv_6.html" class="text-gray-800 block px-4 py-2.5 text-sm hover:bg-gray-200 active:bg-blue-100">Interruptor / Tomacorriente NO funciona</a>
-                        <a href="serv_7.html" class="text-teal-950 font-bold block px-4 py-2.5 text-sm hover:bg-gray-200 active:bg-blue-100">Requiero Solución definitiva para GOTERAS</a>
+                        <a href="serv_7.html" class="text-gray-800 block px-4 py-2.5 text-sm hover:bg-gray-200 active:bg-blue-100">Requiero Solución definitiva para GOTERAS</a>
                         <a href="serv_8.html" class="text-gray-800 block px-4 py-2.5 text-sm hover:bg-gray-200 active:bg-blue-100">Mantenimiento de AIRE ACONDICIONADO</a>
                         <a href="serv_9.html" class="text-gray-800 block px-4 py-2.5 text-sm hover:bg-gray-200 active:bg-blue-100">Instalación de AIRE ACONDICIONADO</a>
                         <a href="serv_10.html" class="text-gray-800 block px-4 py-2.5 text-sm hover:bg-gray-200 active:bg-blue-100">Servicio control de Humedad en Paredes</a>
@@ -93,7 +88,7 @@
                         <a href="serv_15.html" class="text-gray-800 block px-4 py-2.5 text-sm hover:bg-gray-200 active:bg-blue-100">Ampliación de Vivienda y Oficinas</a>
                     </div>
                     <div class="py-1">
-                        <a href="serv_otro.html" class="text-teal-900 font-bold bg-teal-50/50 block px-4 py-2.5 text-sm hover:bg-orange-100 active:bg-orange-200">📝 Otro, Describa su problema</a>
+                        <a href="serv_otro.html" class="text-teal-900 font-bold bg-teal-50/50 block px-4 py-2.5 text-sm hover:bg-orange-100 active:bg-orange-200">Otro, Describa su problema</a>
                     </div>
                 </div>
             </div>
@@ -102,7 +97,6 @@
         </div>
     </div>
 
-    <!-- SECCIÓN DE INICIO ORIGINAL -->
     <main id="seccion-principal" class="flex-grow">
         <section class="bg-teal-900 text-white py-16 md:py-20 px-6">
             <div class="container mx-auto text-center">
@@ -138,7 +132,6 @@
         </section>
     </main>
 
-    <!-- SECCIÓN DE ADMINISTRACIÓN Y OFICINA -->
     <main id="seccion-administracion" class="flex-grow hidden bg-white">
         <div class="bg-teal-900 py-6 md:py-10 px-6 text-white shadow-md">
             <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
@@ -197,33 +190,60 @@
         <img src="whatsapp.png" alt="WhatsApp" class="w-9 h-9 object-contain">
     </a>
 
-    <!-- LÓGICA JAVASCRIPT MEJORADA PARA MANEJO DE MENÚS Y PANTALLAS TÁCTILES -->
     <script>
-        function toggleDropdown(event, menuId) {
-            event.stopPropagation(); // Evita que se cierre inmediatamente al hacer clic
+        function toggleDropdown(event, menuId, btnId) {
+            event.stopPropagation();
             
             const menuDesk = document.getElementById('dropdown-menu-desk');
             const menuMob = document.getElementById('dropdown-menu-mob');
+            const btnDesk = document.getElementById('btn-servicios-desk');
+            const btnMob = document.getElementById('btn-servicios-mob');
+            
             const targetMenu = document.getElementById(menuId);
+            const targetBtn = document.getElementById(btnId);
             
-            // Cerrar el otro menú por si estuviera abierto
-            if(menuId === 'dropdown-menu-desk') menuMob.classList.add('hidden');
-            if(menuId === 'dropdown-menu-mob') menuDesk.classList.add('hidden');
+            // Cerrar el otro menú si estuviera abierto y limpiar sus estilos activos
+            if(menuId === 'dropdown-menu-desk') {
+                menuMob.classList.add('hidden');
+                btnMob.className = "hover:text-teal-700 transition px-2 py-0.5 rounded text-teal-950 inline-flex items-center gap-0.5 focus:outline-none";
+            } else {
+                menuDesk.classList.add('hidden');
+                btnDesk.className = "hover:text-teal-700 transition px-2 py-1 rounded text-gray-700 inline-flex items-center gap-1 focus:outline-none";
+            }
             
-            // Alternar el estado del menú actual
-            targetMenu.classList.toggle('hidden');
+            // Alternar visibilidad del menú actual e iluminar su correspondiente pestaña
+            const isHidden = targetMenu.classList.contains('hidden');
+            if (isHidden) {
+                targetMenu.classList.remove('hidden');
+                if (menuId === 'dropdown-menu-desk') {
+                    targetBtn.className = "bg-teal-800 text-white px-2 py-1 rounded inline-flex items-center gap-1 focus:outline-none transition shadow-inner";
+                } else {
+                    targetBtn.className = "bg-teal-800 text-white px-2 py-0.5 rounded inline-flex items-center gap-0.5 focus:outline-none transition shadow-inner";
+                }
+            } else {
+                targetMenu.classList.add('hidden');
+                if (menuId === 'dropdown-menu-desk') {
+                    targetBtn.className = "hover:text-teal-700 transition px-2 py-1 rounded text-gray-700 inline-flex items-center gap-1 focus:outline-none";
+                } else {
+                    targetBtn.className = "hover:text-teal-700 transition px-2 py-0.5 rounded text-teal-950 inline-flex items-center gap-0.5 focus:outline-none";
+                }
+            }
         }
 
-        // Cierra los menús flotantes si el usuario hace clic en cualquier otra parte de la pantalla
+        // Cierra los menús y devuelve las pestañas a su estado normal si se hace clic fuera
         window.onclick = function(event) {
             const menuDesk = document.getElementById('dropdown-menu-desk');
             const menuMob = document.getElementById('dropdown-menu-mob');
+            const btnDesk = document.getElementById('btn-servicios-desk');
+            const btnMob = document.getElementById('btn-servicios-mob');
             
             if (!event.target.matches('#btn-servicios-desk') && !menuDesk.classList.contains('hidden')) {
                 menuDesk.classList.add('hidden');
+                btnDesk.className = "hover:text-teal-700 transition px-2 py-1 rounded text-gray-700 inline-flex items-center gap-1 focus:outline-none";
             }
             if (!event.target.matches('#btn-servicios-mob') && !menuMob.classList.contains('hidden')) {
                 menuMob.classList.add('hidden');
+                btnMob.className = "hover:text-teal-700 transition px-2 py-0.5 rounded text-teal-950 inline-flex items-center gap-0.5 focus:outline-none";
             }
         }
 
@@ -236,11 +256,10 @@
             const btnServDesk = document.getElementById('btn-servicios-desk');
             const btnServMob = document.getElementById('btn-servicios-mob');
             
-            // Ocultar las secciones mutables
             principal.classList.add('hidden');
             administracion.classList.add('hidden');
             
-            // Limpiar estilos activos previos
+            // Restablecer estilos base por defecto
             navAdminDesk.className = "hover:text-teal-700 transition px-2 py-1 rounded text-gray-700";
             navAdminMob.className = "hover:text-teal-700 transition px-2 py-0.5 rounded text-teal-950";
             btnServDesk.className = "hover:text-teal-700 transition px-2 py-1 rounded text-gray-700 inline-flex items-center gap-1 focus:outline-none";
