@@ -7,12 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes girar_3d {
-            from {
-                transform: rotateY(0deg);
-            }
-            to {
-                transform: rotateY(360deg);
-            }
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
         }
     </style>
 </head>
@@ -45,25 +41,21 @@
         </div>
     </div>
 
+    <!-- SECCIÓN PRINCIPAL ORIGINAL -->
     <main id="seccion-principal" class="flex-grow">
-        
         <section class="bg-teal-900 text-white py-16 md:py-20 px-6">
             <div class="container mx-auto text-center">
                 <h1 class="text-3xl md:text-6xl font-bold mb-6 leading-tight">Soluciones Profesionales para tu Hogar y Oficina</h1>
                 <p class="text-base md:text-xl mb-10 text-teal-100">Calidad, rapidez y confianza en cada mantenimiento.</p>
-                
-                <a href="https://luisescobar971033978.github.io/mi-mapa-app/index.html" 
-                   target="_blank"
-                   class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-base md:text-lg transition duration-300 shadow-lg transform hover:scale-105">
+                <a href="https://luisescobar971033978.github.io/mi-mapa-app/index.html" target="_blank" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-base md:text-lg transition duration-300 shadow-lg transform hover:scale-105">
                      ¡Ponte en contacto hoy mismo!
                 </a>
             </div>
         </section>
 
-        <section id="servicios" class="py-16 px-6">
+        <section class="py-16 px-6">
             <div class="container mx-auto">
                 <h2 class="text-3xl font-bold text-center text-teal-900 mb-12">Nuestros Servicios Destacados</h2>
-                
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-teal-800">
                         <div class="text-4xl mb-4">🏠</div>
@@ -85,84 +77,59 @@
         </section>
     </main>
 
+    <!-- PESTAÑA CATÁLOGO: LISTA DESPLEGABLE ESTILO MENÚ DE APLICACIÓN -->
     <main id="seccion-servicios" class="flex-grow hidden bg-white">
         <div class="bg-teal-900 py-6 md:py-10 px-6 text-white shadow-md">
             <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-                <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Catálogo General de Servicios</h2>
-                <span class="text-xs md:text-sm text-teal-200 font-medium mt-2 md:mt-0">Inicio / Servicios Especializados</span>
+                <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Catálogo de Servicios</h2>
+                <span class="text-xs md:text-sm text-teal-200 font-medium mt-2 md:mt-0">Inicio / Menú Desplegable</span>
             </div>
         </div>
 
-        <div class="container mx-auto px-6 py-12 max-w-5xl">
-            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10 text-sm md:text-base">
-                Seleccione el requerimiento o la labor técnica que necesita consultar. Cada ítem lo redirigirá a su pantalla informativa técnica correspondiente.
+        <div class="container mx-auto px-6 py-16 max-w-lg text-center">
+            <p class="text-gray-600 mb-6 text-sm md:text-base">
+                Haga clic en el botón inferior para desplegar la lista completa de nuestras labores e ingresar a sus detalles técnicos.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a href="serv_1.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🌿 Desbrozado de entrada, patios y Jardines</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_2.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🔧 Problemas de Plomería</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_3.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">💧 Fuga de Agua</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_4.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🌧️ Tuberías trancadas del drenaje sanitario y pluvial</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_5.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">⚡ Mi Ducha Eléctrica NO funciona</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_6.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🔌 Interruptor / Tomacorriente NO funciona</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_7.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-bold text-teal-950 group-hover:text-teal-900 text-sm md:text-base">🏠 Requiero Solución definitiva para GOTERAS</span>
-                    <span class="text-teal-600 opacity-100 pl-2">➔</span>
-                </a>
-                <a href="serv_8.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">❄️ Mantenimiento de AIRE ACONDICIONADO</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_9.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">📐 Instalación de AIRE ACONDICIONADO</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_10.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🧱 Servicio control de Humedad en Paredes</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_11.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🖌️ Retoques de pintura en Fachada y Accesos</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="fumi_1.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🪰 Fumigación contra el Dengue, Chikungunya y Plagas</span>
-                    <span class="text-teal-600 opacity-100 pl-2">➔</span>
-                </a>
-                <a href="serv_13.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🐜 Necesito aplicar veneno para los Sepes</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_14.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🔨 Remodelación de Vivienda y Oficinas</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
-                <a href="serv_15.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
-                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🏗️ Ampliación de Vivienda y Oficinas</span>
-                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
-                </a>
+            <!-- Contenedor del Menú Desplegable (Dropdown) -->
+            <div class="relative inline-block text-left w-full sm:w-80 mx-auto">
+                <div>
+                    <button type="button" onclick="toggleDropdown()" class="inline-flex justify-between items-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-3 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                        Seleccionar Servicio Requerido
+                        <svg class="-mr-1 ml-2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Opciones del menú (Se muestra/oculta dinámicamente) -->
+                <div id="dropdown-menu" class="origin-top-center absolute center-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none hidden z-30 max-h-96 overflow-y-auto text-left">
+                    <div class="py-1" role="none">
+                        <a href="serv_1.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Desbrozado de entrada, patios y Jardines</a>
+                        <a href="serv_2.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Problemas de Plomería</a>
+                        <a href="serv_3.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Fuga de Agua</a>
+                        <a href="serv_4.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Tuberías trancadas del drenaje sanitario y pluvial</a>
+                        <a href="serv_5.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Mi Ducha Eléctrica NO funciona</a>
+                        <a href="serv_6.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Interruptor / Tomacorriente NO funciona</a>
+                        <a href="serv_7.html" class="text-teal-950 font-bold block px-4 py-2.5 text-sm hover:bg-teal-50" role="menuitem">Requiero Solución definitiva para GOTERAS</a>
+                        <a href="serv_8.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Mantenimiento de AIRE ACONDICIONADO</a>
+                        <a href="serv_9.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Instalación de AIRE ACONDICIONADO</a>
+                        <a href="serv_10.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Servicio control de Humedad en Paredes</a>
+                        <a href="serv_11.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Retoques de pintura en Fachada y Accesos</a>
+                        <a href="fumi_1.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Fumigación contra el Dengue, Chikungunya y Plagas</a>
+                        <a href="serv_13.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Necesito aplicar veneno para los Sepes</a>
+                        <a href="serv_14.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Remodelación de Vivienda y Oficinas</a>
+                        <a href="serv_15.html" class="text-gray-700 block px-4 py-2.5 text-sm hover:bg-teal-50 hover:text-teal-900" role="menuitem">Ampliación de Vivienda y Oficinas</a>
+                    </div>
+                    <div class="py-1" role="none">
+                        <a href="serv_otro.html" class="text-teal-900 font-semibold bg-teal-50/50 block px-4 py-2.5 text-sm hover:bg-orange-50 hover:text-orange-950" role="menuitem">📝 Otro, Describa su problema</a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
+    <!-- SECCIÓN DE ADMINISTRACIÓN Y OFICINA -->
     <main id="seccion-administracion" class="flex-grow hidden bg-white">
         <div class="bg-teal-900 py-6 md:py-10 px-6 text-white shadow-md">
             <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
@@ -173,11 +140,8 @@
 
         <div class="container mx-auto px-6 py-12 max-w-6xl">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-                
                 <div class="md:col-span-5 bg-gray-50 rounded-lg overflow-hidden shadow-md border border-gray-200">
-                    <div class="bg-teal-800 text-white p-4 text-center font-bold text-sm tracking-wider">
-                        SOPORTE TÉCNICO COMPROMETIDO
-                    </div>
+                    <div class="bg-teal-800 text-white p-4 text-center font-bold text-sm tracking-wider">SOPORTE TÉCNICO COMPROMETIDO</div>
                     <div class="h-64 md:h-80 bg-cover bg-center flex items-center justify-center p-6 text-center" style="background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('imagen 3d_1_2.png');">
                         <div>
                             <div class="text-5xl mb-4">🏢</div>
@@ -190,35 +154,22 @@
                 <div class="md:col-span-7 space-y-8">
                     <div>
                         <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¿Quiénes somos?</h3>
-                        <p class="text-gray-700 text-justify text-sm leading-relaxed">
-                            Somos un servicio técnico independiente dedicado a brindar mantenimiento especializado para el hogar y la oficina, creado para responder con eficiencia, responsabilidad y calidad a las necesidades de nuestros clientes. Nos especializamos en resolver problemas de manera práctica y efectiva, ofreciendo soporte técnico confiable donde la satisfacción y conformidad final es nuestra mayor prioridad. Cada labor que realizamos refleja nuestro compromiso con la excelencia, aplicando criterios técnicos adecuados y respetando los estándares de seguridad y las normas bolivianas de construcción vigentes.
-                        </p>
+                        <p class="text-gray-700 text-justify text-sm leading-relaxed">Somos un servicio técnico independiente dedicado a brindar mantenimiento especializado para el hogar y la oficina...</p>
                     </div>
-
                     <div>
                         <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¿Nuestro compromiso?</h3>
-                        <p class="text-gray-700 text-justify text-sm leading-relaxed">
-                            Nuestro compromiso es estar presentes cuando nuestros clientes más nos necesitan, brindando atención rápida, oportuna y profesional para solucionar emergencias y mantenimientos en hogares y oficinas. Desarrollamos cada labor con dedicación, cuidando cada detalle y ofreciendo soluciones de habitabilidad que generen tranquilidad, seguridad y confianza. Nuestra responsabilidad es entregar resultados duraderos, realizados con buenas prácticas técnicas y bajo el cumplimiento de los estándares de calidad y la normativa técnica boliviana.
-                        </p>
+                        <p class="text-gray-700 text-justify text-sm leading-relaxed">Nuestro compromiso es estar presentes cuando nuestros clientes más nos necesitan...</p>
                     </div>
-
                     <div>
                         <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¡Nuestro objetivo!</h3>
-                        <p class="text-gray-700 text-justify text-sm leading-relaxed">
-                            Nuestro objetivo es convertirnos en el aliado de confianza de cada familia, administración y oficina, proporcionando servicios de asistencia técnica que mantengan sus espacios seguros, funcionales y en excelentes condiciones. Buscamos superar las expectativas de nuestros clientes mediante soluciones rápidas, eficientes y definitivas, logrando su satisfacción plena a través de un trabajo profesional, responsible y comprometido con el cumplimiento de las normas de construcción y las regulaciones contables y fiscales vigentes para la prestación de oficios.
-                        </p>
+                        <p class="text-gray-700 text-justify text-sm leading-relaxed">Nuestro objetivo es convertirnos en el aliado de confianza de cada familia...</p>
                     </div>
                 </div>
-
             </div>
 
             <div class="mt-16 pt-8 border-t border-gray-100 text-center max-w-3xl mx-auto">
-                <h3 class="text-lg md:text-xl font-bold text-teal-900 mb-3 tracking-wide">
-                    Respaldo Formal para Administraciones y Empresas
-                </h3>
-                <p class="text-gray-600 text-sm md:text-base leading-relaxed px-4">
-                    Facilitamos la gestión contable de su condominio o negocio. Coordinamos la ejecución de trabajos mediante el <span class="font-semibold text-teal-800">mecanismo legal de retenciones impositivas</span> vigentes o mediante facturación electrónica según el requerimiento de su administración.
-                </p>
+                <h3 class="text-lg md:text-xl font-bold text-teal-900 mb-3 tracking-wide">Respaldo Formal para Administraciones y Empresas</h3>
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed px-4">Facilitamos la gestión contable de su condominio o negocio. Coordinamos la ejecución de trabajos mediante el <span class="font-semibold text-teal-800">mecanismo legal de retenciones impositivas</span> vigentes o mediante facturación electrónica según el requerimiento de su administración.</p>
             </div>
         </div>
     </main>
@@ -233,15 +184,27 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/59173694080?text=Gracias%20por%20su%20preferencia%2C%20Por%20favor%20indicar%20que%20tipo%20de%20servicio%20es%20el%20que%20actualmente%20esta%20Usted%20Necesitando" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       class="fixed bottom-6 left-6 z-50 transition transform hover:scale-110 drop-shadow-lg flex items-center justify-center bg-[#25D366] w-14 h-14 rounded-full hover:bg-[#20ba5a]"
-       title="Contactar por WhatsApp">
+    <a href="https://wa.me/59173694080?text=Gracias%20por%20su%20preferencia" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 left-6 z-50 transition transform hover:scale-110 drop-shadow-lg flex items-center justify-center bg-[#25D366] w-14 h-14 rounded-full hover:bg-[#20ba5a]">
         <img src="whatsapp.png" alt="WhatsApp" class="w-9 h-9 object-contain">
     </a>
 
+    <!-- LÓGICA DE INTERACCIÓN DEL MENÚ Y SECCIONES -->
     <script>
+        function toggleDropdown() {
+            const menu = document.getElementById('dropdown-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Cierra el menú desplegable si el usuario hace clic fuera de él
+        window.onclick = function(event) {
+            if (!event.target.matches('#menu-button')) {
+                const dropdown = document.getElementById('dropdown-menu');
+                if (dropdown && !dropdown.classList.contains('hidden')) {
+                    dropdown.classList.add('hidden');
+                }
+            }
+        }
+
         function mostrarSeccion(seccion) {
             const principal = document.getElementById('seccion-principal');
             const administracion = document.getElementById('seccion-administracion');
@@ -252,41 +215,29 @@
             const navServDesk = document.getElementById('nav-servicios-desk');
             const navServMob = document.getElementById('nav-servicios-mob');
             
-            // Ocultar todas por defecto
             principal.classList.add('hidden');
             administracion.classList.add('hidden');
             servicios.classList.add('hidden');
             
-            // Resetear estilos activos de botones
-            navAdminDesk.classList.remove('bg-teal-800', 'text-white');
-            navAdminDesk.classList.add('text-gray-700');
-            navAdminMob.classList.remove('bg-teal-800', 'text-white');
-            navAdminMob.classList.add('text-teal-950');
-            
-            navServDesk.classList.remove('bg-teal-800', 'text-white');
-            navServDesk.classList.add('text-gray-700');
-            navServMob.classList.remove('bg-teal-800', 'text-white');
-            navServMob.classList.add('text-teal-950');
+            navAdminDesk.className = "hover:text-teal-700 transition px-2 py-1 rounded text-gray-700";
+            navAdminMob.className = "hover:text-teal-700 transition px-2 py-0.5 rounded text-teal-950";
+            navServDesk.className = "hover:text-teal-700 transition px-2 py-1 rounded text-gray-700";
+            navServMob.className = "hover:text-teal-700 transition px-2 py-0.5 rounded text-teal-950";
 
             if (seccion === 'administracion') {
                 administracion.classList.remove('hidden');
-                navAdminDesk.classList.add('bg-teal-800', 'text-white');
-                navAdminDesk.classList.remove('text-gray-700');
-                navAdminMob.classList.add('bg-teal-800', 'text-white');
-                navAdminMob.classList.remove('text-teal-950');
+                navAdminDesk.className = "bg-teal-800 text-white px-2 py-1 rounded transition";
+                navAdminMob.className = "bg-teal-800 text-white px-2 py-0.5 rounded transition";
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else if (seccion === 'servicios') {
                 servicios.classList.remove('hidden');
-                navServDesk.classList.add('bg-teal-800', 'text-white');
-                navServDesk.classList.remove('text-gray-700');
-                navServMob.classList.add('bg-teal-800', 'text-white');
-                navServMob.classList.remove('text-teal-950');
+                navServDesk.className = "bg-teal-800 text-white px-2 py-1 rounded transition";
+                navServMob.className = "bg-teal-800 text-white px-2 py-0.5 rounded transition";
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else {
                 principal.classList.remove('hidden');
             }
         }
     </script>
-
 </body>
 </html>
