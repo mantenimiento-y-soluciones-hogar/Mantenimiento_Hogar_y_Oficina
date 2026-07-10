@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CAMBIAR: Título de la pestaña según el servicio -->
-    <title>Detalle Técnico del Servicio - Mantenimiento</title>
+    <!-- Título de la pestaña -->
+    <title>Servicio de Desbrozado y Jardinería - Mantenimiento</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen">
+<body class="bg-gray-50 flex flex-col min-h-screen pb-24 md:pb-0">
 
     <!-- Banner Superior en Verde Teal Corporativo -->
     <header class="bg-teal-900 py-6 md:py-10 px-6 text-white shadow-md">
         <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
-                <!-- CAMBIAR: Título del Servicio -->
                 <h1 class="text-2xl md:text-4xl font-bold tracking-tight">Mantenimiento Técnico Especializado</h1>
                 <p class="text-xs md:text-sm text-teal-200 font-medium mt-1">Garantía de Habitabilidad y Soluciones Profesionales</p>
             </div>
@@ -24,63 +23,60 @@
         </div>
     </header>
 
-    <!-- Contenido Distribuido -->
+    <!-- Contenido Principal -->
     <main class="container mx-auto px-6 py-12 max-w-6xl flex-grow">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        
+        <!-- Sección de dos imágenes de gran tamaño lado a lado -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-stretch">
             
-            <!-- Columna Izquierda: Tarjeta de Referencia Fotográfica Real -->
-            <div class="md:col-span-5 bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
-                <div class="bg-teal-800 text-white p-4 text-center font-bold text-sm tracking-wider">
-                    SOPORTE TÉCNICO COMPROMETIDO
+            <!-- Primera Imagen -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 flex flex-col">
+                <div class="bg-teal-800 text-white p-3 text-center font-bold text-xs tracking-wider">
+                    REGISTRO FOTOGRÁFICO DE REFERENCIA 1
                 </div>
-                <!-- Espacio dedicado para la fotografía real del servicio -->
-                <div class="w-full h-72 md:h-80 bg-gray-100">
-                    <!-- CAMBIAR: Reemplaza 'foto_servicio.jpg' por tu archivo correspondiente (Ej. 'goteras.jpg') -->
-                    <img src="foto_servicio.jpg" alt="Registro fotográfico del servicio técnico" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4 bg-gray-50 border-t border-gray-100">
-                    <p class="text-xs text-gray-500 text-center italic">
-                        Personal técnico capacitado operando bajo estrictas normas de seguridad bolivianas.
-                    </p>
+                <div class="w-full h-72 md:h-96 bg-gray-100">
+                    <img src="jardin_1.jpg" alt="Registro fotográfico del servicio 1" class="w-full h-full object-cover">
                 </div>
             </div>
 
-            <!-- Columna Derecha: Textos de Alcance y Reseñas Informativas -->
-            <div class="md:col-span-7 space-y-8">
-                <div>
-                    <!-- CAMBIAR: Título del Alcance -->
-                    <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¿Cuál es el alcance del servicio?</h3>
-                    <!-- CAMBIAR: Texto de referencia detallado del servicio -->
-                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
-                        Aquí describes detalladamente las labores específicas que cubre este ítem. Explica los problemas comunes que soluciona, los métodos y herramientas técnicas utilizadas, y la manera en que se asegura un resultado definitivo y duradero, cumpliendo con la normativa técnica y los estándares de calidad correspondientes.
-                    </p>
+            <!-- Segunda Imagen -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 flex flex-col">
+                <div class="bg-teal-800 text-white p-3 text-center font-bold text-xs tracking-wider">
+                    REGISTRO FOTOGRÁFICO DE REFERENCIA 2
                 </div>
-
-                <div>
-                    <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¿Nuestro compromiso en esta labor?</h3>
-                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
-                        Brindar una atención rápida y eficaz para neutralizar cualquier falla o riesgo en tu infraestructura, asegurando la limpieza del área de trabajo, el uso de repuestos garantizados y minimizando el impacto en tus actividades diarias, ya sea en un entorno residencial o corporativo.
-                    </p>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¡Nuestro objetivo!</h3>
-                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
-                        Garantizar el correcto funcionamiento y prolongar la vida útil de sus instalaciones mediante soluciones definitivas, logrando la entera conformidad de copropietarios, administradores y familias que confían en nuestro profesionalismo.
-                    </p>
-                </div>
-                
-                <div class="pt-2">
-                    <a href="index.html" class="text-teal-700 font-bold hover:underline text-sm flex items-center gap-1">
-                        ← Regresar al menú de servicios
-                    </a>
+                <div class="w-full h-72 md:h-96 bg-gray-100">
+                    <img src="jardin_2.jpg" alt="Registro fotográfico del servicio 2" class="w-full h-full object-cover">
                 </div>
             </div>
 
         </div>
 
+        <!-- Título y descripción detallada del servicio (Centrados) -->
+        <div class="mt-12 text-center max-w-4xl mx-auto space-y-6">
+            <h2 class="text-2xl md:text-4xl font-extrabold text-teal-900 tracking-tight">
+                Desbrozado de Entradas, Patios y Jardines
+            </h2>
+            
+            <p class="text-gray-700 text-justify md:text-center text-sm md:text-base leading-relaxed px-2">
+                Ofrecemos un servicio completo de limpieza, desbrozado y perfilado de áreas verdes para recuperar la habitabilidad y estética de tus exteriores. Solucionamos problemas de maleza crecida, acumulaciones de follaje y descuido en jardines residenciales o corporativos utilizando herramientas profesionales que garantizan un acabado uniforme, limpio y duradero.
+            </p>
+
+            <div class="pt-4">
+                <a href="index.html" class="text-teal-700 font-bold hover:underline text-sm inline-flex items-center gap-1">
+                    ← Regresar al menú de servicios
+                </a>
+            </div>
+        </div>
+
+        <!-- Botón de Conversión Principal (Enlace a mi-mapa-app para programar servicio) -->
+        <div class="text-center mt-12 mb-16">
+            <a href="https://luisescobar971033978.github.io/mi-mapa-app/index.html" target="_blank" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-full text-base md:text-lg transition duration-300 shadow-lg transform hover:scale-105">
+                ¡Ponte en contacto hoy mismo!
+            </a>
+        </div>
+
         <!-- Bloque de Respaldo Formal Obligatorio -->
-        <div class="mt-16 pt-8 border-t border-gray-100 text-center max-w-3xl mx-auto">
+        <div class="mt-16 pt-8 border-t border-gray-200 text-center max-w-3xl mx-auto">
             <h3 class="text-lg md:text-xl font-bold text-teal-900 mb-3 tracking-wide">
                 Respaldo Formal para Administraciones y Empresas
             </h3>
@@ -90,16 +86,30 @@
         </div>
     </main>
 
-    <!-- Botón Flotante de WhatsApp para conversión directa -->
-    <a href="https://wa.me/59173694080?text=Hola,%20solicito%20información%20sobre%20un%20servicio%20técnico" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 left-6 z-50 transition transform hover:scale-110 drop-shadow-lg flex items-center justify-center bg-[#25D366] w-14 h-14 rounded-full hover:bg-[#20ba5a]">
+    <!-- Botón Flotante de WhatsApp (Ubicado a la izquierda sin tapar textos) -->
+    <a href="https://wa.me/59173694080?text=Hola,%20solicito%20información%20sobre%20el%20servicio%20de%20Desbrozado%20y%20Jardinería" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 left-6 z-50 transition transform hover:scale-110 drop-shadow-lg flex items-center justify-center bg-[#25D366] w-14 h-14 rounded-full hover:bg-[#20ba5a]">
         <img src="whatsapp.png" alt="WhatsApp" class="w-9 h-9 object-contain">
     </a>
 
-    <!-- Pie de página corporativo unificado -->
-    <footer class="bg-teal-900 text-white py-6 mt-auto">
-        <div class="container mx-auto px-6 text-center text-sm text-teal-200">
-            <p class="text-white">&copy; 2019. Todos los derechos reservados.</p>
+    <!-- Pie de página corporativo unificado (Textos desplazados a la derecha para dar espacio a WhatsApp) -->
+    <footer class="bg-teal-900 text-white py-8 mt-auto border-t border-teal-950">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <!-- Bloque Izquierdo: Desplazado para librar el botón flotante en móviles (pl-16) y PCs (md:pl-24) -->
+            <div class="text-center md:text-left pl-0 sm:pl-16 md:pl-24 max-w-md">
+                <h4 class="text-base font-bold tracking-wide">Mantenimiento y Soluciones para el Hogar & Oficina</h4>
+                <p class="text-xs text-teal-300 mt-1">Santa Cruz de la Sierra, Bolivia.</p>
+            </div>
+            <!-- Bloque Derecho: Enlaces de Acceso Técnico -->
+            <div class="flex flex-wrap justify-center gap-4 text-xs md:text-sm text-teal-200">
+                <a href="https://luisescobar971033978.github.io/mi-mapa-app/tecnico.html" target="_blank" class="hover:text-white transition">Acceso Técnico Acreditado</a>
+                <span class="hidden sm:inline">|</span>
+                <a href="https://luisescobar971033978.github.io/mi-mapa-app/admin.html" target="_blank" class="hover:text-white transition">Panel de Control</a>
+            </div>
+        </div>
+        <div class="text-center text-[10px] text-teal-400/60 mt-6 border-t border-teal-950 pt-4">
+            &copy; 2019. Todos los derechos reservados.
         </div>
     </footer>
+
 </body>
 </html>
