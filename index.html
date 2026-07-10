@@ -30,7 +30,7 @@
             <div class="space-x-6 hidden md:flex font-semibold text-gray-700 items-center">
                 <a href="#" id="nav-inicio-desk" onclick="mostrarSeccion('principal')" class="hover:text-teal-700 transition">Inicio</a>
                 <a href="#" id="nav-admin-desk" onclick="mostrarSeccion('administracion')" class="hover:text-teal-700 transition px-2 py-1 rounded">Administración y Oficina</a>
-                <a href="#servicios" id="nav-servicios-desk" onclick="mostrarSeccion('principal')" class="hover:text-teal-700 transition">Servicios</a>
+                <a href="#" id="nav-servicios-desk" onclick="mostrarSeccion('servicios')" class="hover:text-teal-700 transition px-2 py-1 rounded">Servicios</a>
                 <a href="#contacto" class="bg-teal-800 text-white px-4 py-2 rounded-lg hover:bg-teal-900 transition">Contacto</a>
             </div>
         </nav>
@@ -40,12 +40,11 @@
         <div class="flex flex-wrap justify-center items-center gap-4 font-semibold text-sm text-teal-950 px-2">
             <a href="#" id="nav-inicio-mob" onclick="mostrarSeccion('principal')" class="hover:text-teal-700 transition">Inicio</a>
             <a href="#" id="nav-admin-mob" onclick="mostrarSeccion('administracion')" class="hover:text-teal-700 transition px-2 py-0.5 rounded">Administración y Oficina</a>
-            <a href="#servicios" id="nav-servicios-mob" onclick="mostrarSeccion('principal')" class="hover:text-teal-700 transition">Servicios</a>
+            <a href="#" id="nav-servicios-mob" onclick="mostrarSeccion('servicios')" class="hover:text-teal-700 transition px-2 py-0.5 rounded">Servicios</a>
             <a href="#contacto" class="bg-teal-800 text-white px-3 py-1.5 rounded-md hover:bg-teal-900 transition">Contacto</a>
         </div>
     </div>
 
-    <!-- SECCIÓN PRINCIPAL ORIGINAL -->
     <main id="seccion-principal" class="flex-grow">
         
         <section class="bg-teal-900 text-white py-16 md:py-20 px-6">
@@ -86,9 +85,85 @@
         </section>
     </main>
 
-    <!-- NUEVA SECCIÓN DE ADMINISTRACIÓN Y OFICINA (Estilo Corporativo Verde) -->
+    <main id="seccion-servicios" class="flex-grow hidden bg-white">
+        <div class="bg-teal-900 py-6 md:py-10 px-6 text-white shadow-md">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Catálogo General de Servicios</h2>
+                <span class="text-xs md:text-sm text-teal-200 font-medium mt-2 md:mt-0">Inicio / Servicios Especializados</span>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-12 max-w-5xl">
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10 text-sm md:text-base">
+                Seleccione el requerimiento o la labor técnica que necesita consultar. Cada ítem lo redirigirá a su pantalla informativa técnica correspondiente.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="serv_1.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🌿 Desbrozado de entrada, patios y Jardines</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_2.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🔧 Problemas de Plomería</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_3.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">💧 Fuga de Agua</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_4.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🌧️ Tuberías trancadas del drenaje sanitario y pluvial</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_5.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">⚡ Mi Ducha Eléctrica NO funciona</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_6.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🔌 Interruptor / Tomacorriente NO funciona</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_7.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-bold text-teal-950 group-hover:text-teal-900 text-sm md:text-base">🏠 Requiero Solución definitiva para GOTERAS</span>
+                    <span class="text-teal-600 opacity-100 pl-2">➔</span>
+                </a>
+                <a href="serv_8.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">❄️ Mantenimiento de AIRE ACONDICIONADO</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_9.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">📐 Instalación de AIRE ACONDICIONADO</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_10.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🧱 Servicio control de Humedad en Paredes</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_11.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🖌️ Retoques de pintura en Fachada y Accesos</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="fumi_1.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🪰 Fumigación contra el Dengue, Chikungunya y Plagas</span>
+                    <span class="text-teal-600 opacity-100 pl-2">➔</span>
+                </a>
+                <a href="serv_13.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🐜 Necesito aplicar veneno para los Sepes</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_14.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🔨 Remodelación de Vivienda y Oficinas</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+                <a href="serv_15.html" class="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-teal-600 hover:bg-teal-50 transition duration-200 group">
+                    <span class="text-gray-700 font-medium group-hover:text-teal-900 text-sm md:text-base">🏗️ Ampliación de Vivienda y Oficinas</span>
+                    <span class="text-teal-600 opacity-0 group-hover:opacity-100 transition pl-2">➔</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
     <main id="seccion-administracion" class="flex-grow hidden bg-white">
-        <!-- Banner Superior en Verde Teal Corporativo -->
         <div class="bg-teal-900 py-6 md:py-10 px-6 text-white shadow-md">
             <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Administración y Oficina</h2>
@@ -96,11 +171,9 @@
             </div>
         </div>
 
-        <!-- Contenido Distribuido según la Estructura de la Referencia -->
         <div class="container mx-auto px-6 py-12 max-w-6xl">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                 
-                <!-- Columna Izquierda: Tarjeta / Imagen de Referencia Corporativa -->
                 <div class="md:col-span-5 bg-gray-50 rounded-lg overflow-hidden shadow-md border border-gray-200">
                     <div class="bg-teal-800 text-white p-4 text-center font-bold text-sm tracking-wider">
                         SOPORTE TÉCNICO COMPROMETIDO
@@ -114,7 +187,6 @@
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Reseñas con Formato Corporativo -->
                 <div class="md:col-span-7 space-y-8">
                     <div>
                         <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¿Quiénes somos?</h3>
@@ -133,14 +205,13 @@
                     <div>
                         <h3 class="text-lg font-bold text-teal-800 uppercase tracking-wide border-b border-gray-200 pb-1 mb-2">¡Nuestro objetivo!</h3>
                         <p class="text-gray-700 text-justify text-sm leading-relaxed">
-                            Nuestro objetivo es convertirnos en el aliado de confianza de cada familia, administración y oficina, proporcionando servicios de asistencia técnica que mantengan sus espacios seguros, funcionales y en excelentes condiciones. Buscamos superar las expectativas de nuestros clientes mediante soluciones rápidas, eficientes y definitivas, logrando su satisfacción plena a través de un trabajo profesional, responsable y comprometido con el cumplimiento de las normas de construcción y las regulaciones contables y fiscales vigentes para la prestación de oficios.
+                            Nuestro objetivo es convertirnos en el aliado de confianza de cada familia, administración y oficina, proporcionando servicios de asistencia técnica que mantengan sus espacios seguros, funcionales y en excelentes condiciones. Buscamos superar las expectativas de nuestros clientes mediante soluciones rápidas, eficientes y definitivas, logrando su satisfacción plena a través de un trabajo profesional, responsible y comprometido con el cumplimiento de las normas de construcción y las regulaciones contables y fiscales vigentes para la prestación de oficios.
                         </p>
                     </div>
                 </div>
 
             </div>
 
-            <!-- Nuevo Bloque Solicitado de Respaldo Formal (Centrado y antes del pie de página) -->
             <div class="mt-16 pt-8 border-t border-gray-100 text-center max-w-3xl mx-auto">
                 <h3 class="text-lg md:text-xl font-bold text-teal-900 mb-3 tracking-wide">
                     Respaldo Formal para Administraciones y Empresas
@@ -170,35 +241,49 @@
         <img src="whatsapp.png" alt="WhatsApp" class="w-9 h-9 object-contain">
     </a>
 
-    <!-- Lógica de navegación con cambio dinámico de pestañas activas -->
     <script>
         function mostrarSeccion(seccion) {
             const principal = document.getElementById('seccion-principal');
             const administracion = document.getElementById('seccion-administracion');
+            const servicios = document.getElementById('seccion-servicios');
             
             const navAdminDesk = document.getElementById('nav-admin-desk');
             const navAdminMob = document.getElementById('nav-admin-mob');
+            const navServDesk = document.getElementById('nav-servicios-desk');
+            const navServMob = document.getElementById('nav-servicios-mob');
             
+            // Ocultar todas por defecto
+            principal.classList.add('hidden');
+            administracion.classList.add('hidden');
+            servicios.classList.add('hidden');
+            
+            // Resetear estilos activos de botones
+            navAdminDesk.classList.remove('bg-teal-800', 'text-white');
+            navAdminDesk.classList.add('text-gray-700');
+            navAdminMob.classList.remove('bg-teal-800', 'text-white');
+            navAdminMob.classList.add('text-teal-950');
+            
+            navServDesk.classList.remove('bg-teal-800', 'text-white');
+            navServDesk.classList.add('text-gray-700');
+            navServMob.classList.remove('bg-teal-800', 'text-white');
+            navServMob.classList.add('text-teal-950');
+
             if (seccion === 'administracion') {
-                principal.classList.add('hidden');
                 administracion.classList.remove('hidden');
-                
-                // Aplicar el color de pestaña activa (Verde Corporativo de Fondo)
                 navAdminDesk.classList.add('bg-teal-800', 'text-white');
                 navAdminDesk.classList.remove('text-gray-700');
                 navAdminMob.classList.add('bg-teal-800', 'text-white');
                 navAdminMob.classList.remove('text-teal-950');
-                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (seccion === 'servicios') {
+                servicios.classList.remove('hidden');
+                navServDesk.classList.add('bg-teal-800', 'text-white');
+                navServDesk.classList.remove('text-gray-700');
+                navServMob.classList.add('bg-teal-800', 'text-white');
+                navServMob.classList.remove('text-teal-950');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else {
-                administracion.classList.add('hidden');
                 principal.classList.remove('hidden');
-                
-                // Remover el color activo al volver a Inicio
-                navAdminDesk.classList.remove('bg-teal-800', 'text-white');
-                navAdminDesk.classList.add('text-gray-700');
-                navAdminMob.classList.remove('bg-teal-800', 'text-white');
-                navAdminMob.classList.add('text-teal-950');
             }
         }
     </script>
