@@ -28,7 +28,7 @@
     </div>
 
     <script>
-        // CONFIGURACIÓN DE GITHUB CORREGIDA Y REVISADA
+        // CONFIGURACIÓN DE GITHUB
         const USER_GITHUB = "mantenimiento-y-soluciones-hogar"; 
         const REPO_GITHUB = "Mantenimiento_Hogar_y_Oficina";   
         const BRANCH = "main"; 
@@ -38,7 +38,7 @@
         const nextBtn = document.getElementById('next-btn');
 
         let originalImagesCount = 0;
-        let currentIndex = 1; // Empezamos en 1 debido a la clonación del primer clon táctico
+        let currentIndex = 1; // Empezamos en 1 por la clonación táctica
         let isTransitioning = false;
         let autoPlayInterval = null;
         let resumeTimeout = null;
@@ -75,8 +75,7 @@
         function initCarousel(fetchedImages) {
             track.innerHTML = '';
 
-            // --- CONFIGURACIÓN PARA EFECTO INFINITO CONTINUO ---
-            // Creamos un array que tenga: [Última Imagen, ...Imágenes Reales..., Primera Imagen]
+            // --- CONFIGURACIÓN PARA EFECTO INFINITO ---
             const imagesList = [
                 fetchedImages[fetchedImages.length - 1], // Clon del final al principio
                 ...fetchedImages,
@@ -90,7 +89,7 @@
                 track.appendChild(slide);
             });
 
-            // Establecemos el inicio en la posición 1 (la primera imagen real) sin mostrar animación
+            // Posicionamos en la primera imagen real sin animación al iniciar
             track.style.transition = 'none';
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
@@ -107,14 +106,14 @@
             // Si llegamos al clon del final (última posición en el DOM)
             if (currentIndex === originalImagesCount + 1) {
                 track.style.transition = 'none';
-                currentIndex = 1; // Saltamos a la primera imagen real
+                currentIndex = 1; // Saltamos instantáneamente a la primera imagen real
                 track.style.transform = `translateX(-${currentIndex * 100}%)`;
             }
             
             // Si llegamos al clon del principio (posición 0 en el DOM)
             if (currentIndex === 0) {
                 track.style.transition = 'none';
-                currentIndex = originalImagesCount; // Saltamos a la última imagen real
+                currentIndex = originalImagesCount; // Saltamos instantáneamente a la última imagen real
                 track.style.transform = `translateX(-${currentIndex * 100}%)`;
             }
         }
@@ -126,8 +125,8 @@
             isTransitioning = true;
             currentIndex = index;
 
-            track.style.transition = 'transform 700s ease-in-out'; // Mantiene tu velocidad de 700ms
-            track.style.transitionProperty = 'transform';
+            // CORREGIDO: Cambiado 700s a 0.7s (700 milisegundos)
+            track.style.transition = 'transform 0.7s ease-in-out'; 
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
 
@@ -136,7 +135,7 @@
             stopAutoplay();
             autoPlayInterval = setInterval(() => {
                 goToSlide(currentIndex + 1);
-            }, 3000); // 3 Segundos de intervalo automático
+            }, 3000); // Cambio automático cada 3 segundos
         }
 
         function stopAutoplay() {
