@@ -31,9 +31,10 @@
     </div>
 
     <script>
-        // CONFIGURACIÓN DE GITHUB
-        const USER_GITHUB = "luisescobar971033978"; // Tu usuario de GitHub
-        const REPO_GITHUB = "mi-mapa-app";          // Tu repositorio
+        // CONFIGURACIÓN DE GITHUB CORREGIDA Y REVISADA
+        const USER_GITHUB = "mantenimiento-y-soluciones-hogar"; 
+        const REPO_GITHUB = "Mantenimiento_Hogar_y_Oficina";   
+        const BRANCH = "main"; 
 
         const track = document.getElementById('carousel-track');
         const prevBtn = document.getElementById('prev-btn');
@@ -48,24 +49,27 @@
         // 1. Obtener imágenes automáticamente mediante la API de GitHub
         async function fetchImages() {
             try {
-                const response = await fetch(`https://api.github.com/repos/${USER_GITHUB}/${REPO_GITHUB}/contents/`);
+                const response = await fetch(`https://api.github.com/repos/${USER_GITHUB}/${REPO_GITHUB}/contents/?ref=${BRANCH}`);
                 if (!response.ok) throw new Error("Error consultando la API");
                 const files = await response.json();
                 
-                // Filtrar solo los archivos que sean JPG
+                // Filtrar archivos que terminen en .jpg o .jpeg (insensible a mayúsculas/minúsculas)
                 images = files
-                    .filter(file => file.name.toLowerCase().endsWith('.jpg'))
+                    .filter(file => {
+                        const name = file.name.toLowerCase();
+                        return name.endsWith('.jpg') || name.endsWith('.jpeg');
+                    })
                     .map(file => file.download_url);
 
                 if (images.length === 0) {
-                    track.innerHTML = `<div class="w-full flex-shrink-0 flex items-center justify-center bg-gray-100 text-red-500 font-semibold">No se encontraron archivos .JPG</div>`;
+                    track.innerHTML = `<div class="w-full flex-shrink-0 flex items-center justify-center bg-gray-100 text-red-500 font-semibold">No se encontraron archivos .jpg o .jpeg en la rama ${BRANCH}</div>`;
                     return;
                 }
 
                 initCarousel();
             } catch (error) {
                 console.error("Error al cargar las imágenes:", error);
-                track.innerHTML = `<div class="w-full flex-shrink-0 flex items-center justify-center bg-gray-100 text-red-500 font-semibold">Error de conexión al cargar la publicidad</div>`;
+                track.innerHTML = `<div class="w-full flex-shrink-0 flex items-center justify-center bg-gray-100 text-red-500 font-semibold text-center p-4">Error de conexión con GitHub o límite de consultas alcanzado.</div>`;
             }
         }
 
