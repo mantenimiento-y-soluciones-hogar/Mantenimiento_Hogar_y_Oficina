@@ -1,189 +1,171 @@
-HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicidad Dinámica</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Contenedor del carrusel */
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 0.75rem; /* rounded-xl de Tailwind */
-        }
-
-        /* Tira deslizante que contiene las diapositivas */
-        .carousel-track {
-            display: flex;
-            /* Usamos transiciones CSS nativas y suaves */
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
-
-        /* Cada diapositiva individual */
-        .carousel-slide {
-            min-width: 100%;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #0f172a; /* Fondo oscuro de relleno */
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            height: auto;
-            max-height: 450px;
-            object-fit: contain;
-        }
-
-        /* Botones de navegación (anterior y posterior) */
-        .nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: background-color 0.3s, transform 0.2s;
-            z-index: 10;
-        }
-
-        .nav-btn:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .prev-btn { left: 16px; }
-        .next-btn { right: 16px; }
-    </style>
 </head>
-<body class="bg-transparent m-0 p-0 flex items-center justify-center min-h-screen">
+<body class="bg-transparent m-0 p-0 overflow-hidden">
 
-    <div class="carousel-container shadow-2xl max-w-5xl mx-auto">
-        
-        <!-- TIRA DESLIZANTE CON LAS IMÁGENES -->
-        <div class="carousel-track" id="carouselTrack">
-            <!-- NOTA: Reemplaza o añade aquí tus imágenes reales en las etiquetas <img> -->
-            <div class="carousel-slide">
-                <img src="img_carrusel_1.jpg" alt="Servicio Técnico 1">
-            </div>
-            <div class="carousel-slide">
-                <img src="img_carrusel_2.jpg" alt="Servicio Técnico 2">
-            </div>
-            <div class="carousel-slide">
-                <img src="img_carrusel_3.jpg" alt="Servicio Técnico 3">
-            </div>
-            <div class="carousel-slide">
-                <img src="img_carrusel_4.jpg" alt="Servicio Técnico 4">
+    <div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-xl shadow-lg group">
+        <!-- Contenedor del Carrusel -->
+        <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out w-full h-[300px] md:h-[450px]">
+            <!-- Las imágenes se cargarán dinámicamente aquí -->
+            <div class="w-full flex-shrink-0 flex items-center justify-center bg-gray-100 text-gray-500">
+                <span class="animate-pulse">Cargando publicidad desde GitHub...</span>
             </div>
         </div>
 
-        <!-- BOTONES DE NAVEGACIÓN IZQUIERDA Y DERECHA -->
-        <button class="nav-btn prev-btn" id="prevBtn">‹</button>
-        <button class="nav-btn next-btn" id="nextBtn">›</button>
+        <!-- Botón Izquierdo (Atrás) -->
+        <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white rounded-full p-2 md:p-3 transition opacity-0 group-hover:opacity-100 focus:outline-none z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
 
+        <!-- Botón Derecho (Adelante) -->
+        <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white rounded-full p-2 md:p-3 transition opacity-0 group-hover:opacity-100 focus:outline-none z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
     </div>
 
-    <!-- SCRIPT DE DESLIZAMIENTO INFINITO (SIN RETROCESO) -->
     <script>
-        const track = document.getElementById('carouselTrack');
-        const slides = Array.from(track.children);
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        
-        let currentIndex = 1; // Empezamos en 1 debido a la clonación técnica inicial
+        // CONFIGURACIÓN DE GITHUB CORREGIDA Y REVISADA
+        const USER_GITHUB = "mantenimiento-y-soluciones-hogar"; 
+        const REPO_GITHUB = "Mantenimiento_Hogar_y_Oficina";   
+        const BRANCH = "main"; 
+
+        const track = document.getElementById('carousel-track');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        let originalImagesCount = 0;
+        let currentIndex = 1; // Empezamos en 1 debido a la clonación del primer clon táctico
         let isTransitioning = false;
-        const autoPlayInterval = 4000; // Tiempo de cambio automático (4 segundos)
-        let timer;
+        let autoPlayInterval = null;
+        let resumeTimeout = null;
 
-        // --- EXPLICACIÓN DEL TRUCO INFINITO ---
-        // Clonamos la primera imagen y la ponemos al final. 
-        // Clonamos la última imagen y la ponemos al principio.
-        // Esto permite un truco visual para que la transición parezca infinita y nunca retroceda de golpe.
-        const firstClone = slides[0].cloneNode(true);
-        const lastClone = slides[slides.length - 1].cloneNode(true);
+        // 1. Obtener imágenes automáticamente mediante la API de GitHub
+        async function fetchImages() {
+            try {
+                const response = await fetch(`https://api.github.com/repos/${USER_GITHUB}/${REPO_GITHUB}/contents/?ref=${BRANCH}`);
+                if (!response.ok) throw new Error("Error consultando la API");
+                const files = await response.json();
+                
+                // Filtrar archivos que terminen en .jpg o .jpeg (insensible a mayúsculas/minúsculas)
+                let fetchedImages = files
+                    .filter(file => {
+                        const name = file.name.toLowerCase();
+                        return name.endsWith('.jpg') || name.endsWith('.jpeg');
+                    })
+                    .map(file => file.download_url);
 
-        track.appendChild(firstClone);
-        track.insertBefore(lastClone, slides[0]);
+                if (fetchedImages.length === 0) {
+                    track.innerHTML = `<div class="w-full flex-shrink-0 flex items-center justify-center bg-gray-100 text-red-500 font-semibold">No se encontraron archivos .jpg o .jpeg en la rama ${BRANCH}</div>`;
+                    return;
+                }
 
-        // Actualizamos la lista de diapositivas incluyendo los clones
-        const allSlides = Array.from(track.children);
-        
-        // Ajustamos la posición inicial al primer elemento real (índice 1) sin animar
-        track.style.transition = 'none';
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                originalImagesCount = fetchedImages.length;
+                initCarousel(fetchedImages);
+            } catch (error) {
+                console.error("Error al cargar las imágenes:", error);
+                track.innerHTML = `<div class="w-full flex-shrink-0 flex items-center justify-center bg-gray-100 text-red-500 font-semibold text-center p-4">Error de conexión con GitHub o límite de consultas alcanzado.</div>`;
+            }
+        }
 
-        function updateSlidePosition() {
-            track.style.transition = 'transform 0.5s ease-in-out';
+        // 2. Inicializar componentes del carrusel con clones infinitos sin retroceso
+        function initCarousel(fetchedImages) {
+            track.innerHTML = '';
+
+            // --- CONFIGURACIÓN PARA EFECTO INFINITO CONTINUO ---
+            // Creamos un array que tenga: [Última Imagen, ...Imágenes Reales..., Primera Imagen]
+            const imagesList = [
+                fetchedImages[fetchedImages.length - 1], // Clon del final al principio
+                ...fetchedImages,
+                fetchedImages[0]                         // Clon del principio al final
+            ];
+
+            imagesList.forEach((src) => {
+                const slide = document.createElement('div');
+                slide.className = "w-full flex-shrink-0 h-full bg-gray-900 flex justify-center items-center";
+                slide.innerHTML = `<img src="${src}" alt="Publicidad" class="w-full h-full object-contain">`;
+                track.appendChild(slide);
+            });
+
+            // Establecemos el inicio en la posición 1 (la primera imagen real) sin mostrar animación
+            track.style.transition = 'none';
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Escuchar el final de la transición para hacer el cambio invisible
+            track.addEventListener('transitionend', handleTransitionEnd);
+
+            startAutoplay();
+        }
+
+        // 3. Control de transición continua silenciosa
+        function handleTransitionEnd() {
+            isTransitioning = false;
+            
+            // Si llegamos al clon del final (última posición en el DOM)
+            if (currentIndex === originalImagesCount + 1) {
+                track.style.transition = 'none';
+                currentIndex = 1; // Saltamos a la primera imagen real
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+            
+            // Si llegamos al clon del principio (posición 0 en el DOM)
+            if (currentIndex === 0) {
+                track.style.transition = 'none';
+                currentIndex = originalImagesCount; // Saltamos a la última imagen real
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        }
+
+        // 4. Moverse de slide con efecto fluido
+        function goToSlide(index) {
+            if (originalImagesCount === 0 || isTransitioning) return;
+            
+            isTransitioning = true;
+            currentIndex = index;
+
+            track.style.transition = 'transform 700s ease-in-out'; // Mantiene tu velocidad de 700ms
+            track.style.transitionProperty = 'transform';
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
 
-        // Evento que se ejecuta al terminar la animación de desplazamiento
-        track.addEventListener('transitionend', () => {
-            isTransitioning = false;
+        // 5. Controles de Autoplay e Interacción del Usuario
+        function startAutoplay() {
+            stopAutoplay();
+            autoPlayInterval = setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, 3000); // 3 Segundos de intervalo automático
+        }
+
+        function stopAutoplay() {
+            if (autoPlayInterval) clearInterval(autoPlayInterval);
+        }
+
+        function userInteraction() {
+            stopAutoplay();
+            if (resumeTimeout) clearTimeout(resumeTimeout);
             
-            // Si llegamos al clon del final (que es idéntico a la imagen 1),
-            // saltamos instantáneamente a la imagen 1 real desactivando la animación.
-            if (currentIndex === allSlides.length - 1) {
-                track.style.transition = 'none';
-                currentIndex = 1;
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
-            
-            // Si llegamos al clon del principio (que es idéntico a la última imagen),
-            // saltamos instantáneamente a la última imagen real desactivando la animación.
-            if (currentIndex === 0) {
-                track.style.transition = 'none';
-                currentIndex = allSlides.length - 2;
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
+            // Si pasan 2 segundos sin interactuar, reanudar autoplay
+            resumeTimeout = setTimeout(() => {
+                startAutoplay();
+            }, 2000); 
+        }
+
+        // Eventos Manuales
+        prevBtn.addEventListener('click', () => {
+            goToSlide(currentIndex - 1);
+            userInteraction();
         });
 
-        function moveToNext() {
-            if (isTransitioning) return;
-            isTransitioning = true;
-            currentIndex++;
-            updateSlidePosition();
-            resetTimer();
-        }
+        nextBtn.addEventListener('click', () => {
+            goToSlide(currentIndex + 1);
+            userInteraction();
+        });
 
-        function moveToPrev() {
-            if (isTransitioning) return;
-            isTransitioning = true;
-            currentIndex--;
-            updateSlidePosition();
-            resetTimer();
-        }
-
-        // Controladores de eventos para los botones físicos
-        nextBtn.addEventListener('click', moveToNext);
-        prevBtn.addEventListener('click', moveToPrev);
-
-        // Control de reproducción automática (Auto-play)
-        function startTimer() {
-            timer = setInterval(moveToNext, autoPlayInterval);
-        }
-
-        function resetTimer() {
-            clearInterval(timer);
-            startTimer();
-        }
-
-        // Iniciar el temporizador al cargar la página
-        startTimer();
+        // Iniciar carga
+        fetchImages();
     </script>
 </body>
 </html>
